@@ -5,5 +5,5 @@ Features :
 CustomCommands,
 CustomPotions,
 CustomFly
-Enjoy!
+| Enjoy!
 
