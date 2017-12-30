@@ -2,7 +2,7 @@
 PlexiumPE CORE
 
 Features :
-CustomCommands
-CustomPotions
+CustomCommands,
+CustomPotions,
 CustomFly
 
