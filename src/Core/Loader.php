@@ -31,7 +31,7 @@ class Loader extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents(new CustomPotionEvent($this), $this);
 		$this->getServer()->getPluginManager()->registerEvents(new FlyEvent($this), $this);
 		$this->getServer()->getPluginManager()->registerEvents(new Potions($this), $this);
-		$this->getServer()->getLogger()->notice("Core was enabled!");
+		$this->getServer()->getLogger()->notice("VMCore was enabled!");
 		
 	}
 }	
