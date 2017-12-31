@@ -23,9 +23,9 @@ class CustomPotion extends PluginCommand {
 		
     }
 	
-	public function execute(CommandSender $sender, $commandLabel, array $args) {
+	public function execute(CommandSender $sender, string $commandLabel, array $args) {
 		
-		if($sender->hasPermission("core.command.cp") || $sender->isOp()){
+		if($sender->hasPermission("vmcore.command.cp") || $sender->isOp()){
 				
 			if(isset($args[0])) {
 					 
@@ -47,6 +47,7 @@ class CustomPotion extends PluginCommand {
 												TF::DARK_GRAY . " * " . TF::GREEN . "Night Vision" . TF::GRAY . " (3:00)");
 													 
 						$player->getInventory()->addItem($raiding);
+						return true;
 							 
 						break;
 							 
@@ -62,6 +63,7 @@ class CustomPotion extends PluginCommand {
 											TF::DARK_GRAY . " * " . TF::GREEN . "Fire Resistance" . TF::GRAY . " (6:00)");
 													 
 						$player->getInventory()->addItem($pvp);
+					        return true;
 							 
 						break;
 						 
@@ -70,16 +72,16 @@ class CustomPotion extends PluginCommand {
 			}
 		}
 		
-		if(!$sender->hasPermission("core.command.cp")) {
+		if(!$sender->hasPermission("vmcore.command.cp")) {
 					
 			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "You don't have permission to use this command.");
-				
+			return true;
 		}
 
 		else {
 				
 			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::GOLD . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Usage: /custompotion (player) (potion)");
-				
+			return true;
 		}		
 	}
 }
