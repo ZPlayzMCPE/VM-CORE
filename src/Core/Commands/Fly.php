@@ -21,22 +21,23 @@ class Fly extends PluginCommand {
 		
     }
 	
-	public function execute(CommandSender $sender, $commandLabel, array $args) {
+	public function execute(CommandSender $sender, string $commandLabel, array $args) {
 		
 		if(!$sender instanceof Player) {
 			
 			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "You must run this command in-game.");
+			return true;
 		
 		}
 		
 		if(count($args) < 1) {
 			
-            $sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::GOLD . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Usage: /fly (on/off)");
+            $sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::GOLD . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "§5Please use:  §d/fly (on/off)");
 			return true;
 			 
         }
 		
-		if($sender->hasPermission("core.command.fly") || $sender->isOp()) {
+		if($sender->hasPermission("vmcore.command.fly") || $sender->isOp()) {
 				
 			if($sender instanceof Player) {
 					
@@ -47,15 +48,15 @@ class Fly extends PluginCommand {
 						case "on":
 							
 						$sender->setAllowFlight(true);
-						$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::GREEN . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Your ability to fly was enabled.");
-							
+						$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::GREEN . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "§bYour ability to fly was enabled.");
+						return true;
 						break;
 							
 						case "off":
 							
 						$sender->setAllowFlight(false);
-						$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Your ablitiy to fly was disabled.");
-							
+						$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "§3Your ablitiy to fly was disabled.");
+						return true;
 						break;
 							
 					}
@@ -63,10 +64,10 @@ class Fly extends PluginCommand {
 			}
 		}
 		
-		if(!$sender->hasPermission("core.command.fly")) {
+		if(!$sender->hasPermission("vmcore.command.fly")) {
 					
-			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "You don't have permission to use this command.");
-				
+			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "§6You don't have permission to use this command.");
+			return true;	
 		}
 	}
 }
