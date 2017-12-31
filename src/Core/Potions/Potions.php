@@ -28,6 +28,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::NIGHT_VISION)->setDuration(180*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 5, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
+				return true;
 				
 				break;
 				
@@ -36,6 +37,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::NIGHT_VISION)->setDuration(480*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 6, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
+				return true;
 				
 				break;
 				
@@ -44,6 +46,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::INVISIBILITY)->setDuration(180*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 7, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
+				return true;
 				
 				break;
 				
@@ -52,6 +55,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::INVISIBILITY)->setDuration(480*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 8, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
+				return true;
 				
 				break;
 				
@@ -60,6 +64,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::JUMP)->setDuration(180*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 9, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
+				return true;
 				
 				break;
 				
@@ -68,7 +73,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::JUMP)->setDuration(480*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 10, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 11:
@@ -76,7 +81,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::JUMP)->setDuration(90*20)->setAmplifier(2));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 11, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 12:
@@ -84,7 +89,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::FIRE_RESISTANCE)->setDuration(180*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 12, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 13:
@@ -92,7 +97,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::FIRE_RESISTANCE)->setDuration(480*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 13, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 14:
@@ -100,7 +105,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::SPEED)->setDuration(180*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 14, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 15:
@@ -108,7 +113,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::SPEED)->setDuration(480*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 15, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 16:
@@ -116,7 +121,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::SPEED)->setDuration(90*20)->setAmplifier(2));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 16, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 17:
@@ -124,7 +129,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::SLOWNESS)->setDuration(90*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 17, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 18:
@@ -132,7 +137,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::SLOWNESS)->setDuration(240*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 18, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 19:
@@ -140,7 +145,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::WATER_BREATHING)->setDuration(180*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 19, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 20:
@@ -148,7 +153,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::WATER_BREATHING)->setDuration(480*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 20, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 21:
@@ -156,7 +161,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::INSTANT_HEALTH)->setDuration(1)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 21, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 22:
@@ -164,7 +169,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::INSTANT_HEALTH)->setDuration(1)->setAmplifier(2));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 22, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 23:
@@ -172,7 +177,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::INSTANT_DAMAGE)->setDuration(1)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 23, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 24:
@@ -180,7 +185,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::INSTANT_DAMAGE)->setDuration(1)->setAmplifier(2));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 24, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 25:
@@ -188,7 +193,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::POISON)->setDuration(45*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 25, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 26:
@@ -196,7 +201,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::POISON)->setDuration(120*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 26, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 27:
@@ -204,7 +209,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::POISON)->setDuration(22*20)->setAmplifier(2));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 27, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 28:
@@ -212,7 +217,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::REGENERATION)->setDuration(45*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 28, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 29:
@@ -220,7 +225,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::REGENERATION)->setDuration(120*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 29, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 30:
@@ -228,7 +233,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::REGENERATION)->setDuration(22*20)->setAmplifier(2));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 30, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 31:
@@ -236,7 +241,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::STRENGTH)->setDuration(180*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 31, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 32:
@@ -244,7 +249,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::STRENGTH)->setDuration(480*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 32, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 33:
@@ -252,7 +257,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::STRENGTH)->setDuration(90*20)->setAmplifier(2));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 33, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 34:
@@ -260,7 +265,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::WEAKNESS)->setDuration(90*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 34, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 35:
@@ -268,7 +273,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::WEAKNESS)->setDuration(240*20)->setAmplifier(1));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 35, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 				case 36:
@@ -276,7 +281,7 @@ class Potions implements Listener {
 				$player->addEffect(Effect::getEffect(Effect::WITHER)->setDuration(40*20)->setAmplifier(2));
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 36, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
-				
+				return true;
 				break;
 				
 			}
