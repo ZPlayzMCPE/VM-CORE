@@ -21,7 +21,7 @@ class Feed extends PluginCommand {
 		
     }
 	
-	public function execute(CommandSender $sender, $commandLabel, array $args) {
+	public function execute(CommandSender $sender, string $commandLabel, array $args) {
 		
 		if(!$sender instanceof Player) {
 			
@@ -29,7 +29,7 @@ class Feed extends PluginCommand {
 		
 		}
 		
-		if($sender->hasPermission("core.command.feed") || $sender->isOp()) {
+		if($sender->hasPermission("vmcore.command.feed") || $sender->isOp()) {
 				
 			if($sender instanceof Player) {
 					
@@ -39,7 +39,7 @@ class Feed extends PluginCommand {
 			}
 		}
 		
-		elseif(!$sender->hasPermission("core.command.feed")) {
+		elseif(!$sender->hasPermission("vmcore.command.feed")) {
 				
 			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "You don't have permission to use this command.");
 				
