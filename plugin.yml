@@ -1,7 +1,7 @@
-name: Core
+name: VM-Core
 main: Core\Loader
-version: 1.0
+version: 2.0.0-B1
 api: [3.0.0-ALPHA8, 3.0.0-ALPHA9]
-author: StrafelessPvP
-description: PlexiumPE-CORE
+author: VMPE Development Team
+description: VM-Core
 commands:
