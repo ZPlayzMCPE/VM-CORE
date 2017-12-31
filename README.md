@@ -1,5 +1,5 @@
-# PlexiumPE-CORE
-PlexiumPE CORE
+# VM-CORE
+VM CORE
 
 Features :
 CustomCommands,
