@@ -33,7 +33,7 @@ class CustomPotionEvent implements Listener {
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 100, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
 				$player->addTitle(TF::DARK_GRAY . TF::BOLD . "(" . TF::GREEN . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Consumed:", TF::RED . TF::BOLD . "Raiding Elixir");
-				
+				return true;
 				break;
 				
 				case 101:
@@ -46,7 +46,7 @@ class CustomPotionEvent implements Listener {
 				$player->getInventory()->removeItem(Item::get(Item::POTION, 101, 1));
 				$player->getInventory()->addItem(Item::get(Item::GLASS_BOTTLE, 0, 1));
 				$player->addTitle(TF::DARK_GRAY . TF::BOLD . "(" . TF::GREEN . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Consumed:", TF::AQUA . TF::BOLD . "PVP Elixir");
-				
+				return true;
 				break;
 				
 			}
@@ -76,6 +76,7 @@ class CustomPotionEvent implements Listener {
 									 TF::DARK_GRAY . " * " . TF::GREEN . "Night Vision" . TF::GRAY . " (3:00)");
 				
 				$player->getInventory()->addItem($item);
+				return true;
 				
 				break;
 				
@@ -92,7 +93,7 @@ class CustomPotionEvent implements Listener {
 									 TF::DARK_GRAY . " * " . TF::GREEN . "Fire Resistance" . TF::GRAY . " (6:00)");
 									 
 				$player->getInventory()->addItem($item);
-				
+				return true;
 				break;
 		
 			}
