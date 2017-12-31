@@ -27,6 +27,7 @@ class FlyEvent implements Listener {
 					$damager->setFlying(false);
 					$damager->setAllowFlight(false);
 					$damager->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Flight was disabled in combat mode!");
+					return true;
 					
 				}
 
@@ -35,7 +36,7 @@ class FlyEvent implements Listener {
 					$entity->setFlying(false);
 					$entity->setAllowFlight(false);
 					$entity->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Flight was disabled in combat mode!");
-					
+					return true;
 				}
 			}
 		}
