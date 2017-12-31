@@ -21,28 +21,28 @@ class ClearInventory extends PluginCommand {
 		
     }
 	
-	public function execute(CommandSender $sender, $commandLabel, array $args) {
+	public function execute(CommandSender $sender, string $commandLabel, array $args) {
 		
 		if(!$sender instanceof Player) {
 			
 			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "You must run this command in-game.");
-		
+		        return true;
 		}
 		
-		if($sender->hasPermission("core.command.ci")) {
+		if($sender->hasPermission("vmcore.command.ci")) {
 			
 			if($sender instanceof Player) {
 				
 				$sender->getInventory()->clearAll();
 				$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Your inventory has been cleared.");
-			
+			        return true;
 			}
 		}
 		
-		if(!$sender->hasPermission("core.command.ci")) {
+		if(!$sender->hasPermission("vmcore.command.ci")) {
 					
 			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "You don't have permission to use this command.");
-					
+			return true;
 		}
 	}
 }
