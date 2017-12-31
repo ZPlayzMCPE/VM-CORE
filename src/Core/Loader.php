@@ -5,11 +5,9 @@ namespace Core;
 use Core\Commands\ClearInventory;
 use Core\Commands\CustomPotion;
 use Core\Commands\Feed;
-use Core\Commands\Fly;
 use Core\Commands\Heal;
 
 use Core\CustomPotion\CustomPotionEvent;
-use Core\Fly\FlyEvent;
 use Core\Potions\Potions;
 
 use pocketmine\event\Listener;
@@ -24,7 +22,6 @@ class Loader extends PluginBase implements Listener {
 		$this->getServer()->getCommandMap()->register("clearinventory", new ClearInventory("clearinventory", $this));
 		$this->getServer()->getCommandMap()->register("custompotion", new CustomPotion("custompotion", $this));
 		$this->getServer()->getCommandMap()->register("feed", new Feed("feed", $this));
-        $this->getServer()->getCommandMap()->register("fly", new Fly("fly", $this));
 		$this->getServer()->getCommandMap()->register("heal", new Heal("heal", $this));
 
 		
