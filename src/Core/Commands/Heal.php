@@ -21,28 +21,28 @@ class Heal extends PluginCommand {
 		
     }
 	
-	public function execute(CommandSender $sender, $commandLabel, array $args) {
+	public function execute(CommandSender $sender, string $commandLabel, array $args) {
 		
 		if(!$sender instanceof Player) {
 			
 			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "You must run this command in-game.");
-		
+		        return true;
 		}
 
-		if($sender->hasPermission("core.command.heal") || $sender->isOp()) {
+		if($sender->hasPermission("vmcore.command.heal") || $sender->isOp()) {
 				
 			if($sender instanceof Player) {
 					
 				$sender->setHealth(20);
 				$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::GREEN . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "Your health has been restored.");
-					
+				return true;
 			}
 		}
 		
-		elseif(!$sender->hasPermission("core.command.heal")) {
+		elseif(!$sender->hasPermission("vmcore.command.heal")) {
 				
 			$sender->sendMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::RED . "!" . TF::DARK_GRAY . ") " . TF::RESET . TF::GRAY . "You don't have permission to use this command.");
-				
+			return true;
 		}
 	}
 }
